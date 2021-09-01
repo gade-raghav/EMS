@@ -6,6 +6,7 @@ from .models import Employee
 
 class EmployeeAdmin(admin.ModelAdmin):
     fields = [
+        'unique_id',
         'employee_id',
         'employee_name',
         'date_created',
@@ -13,6 +14,7 @@ class EmployeeAdmin(admin.ModelAdmin):
 
     readonly_fields= [
         'date_created',
+        'unique_id',
     ]
 
 
