@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'v$s+3)(s9)y%&z6p5f6$$wvl6(_$3k#q3rfm1ztu-=c)!oibq9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*',]
+ALLOWED_HOSTS = ['em-ap.herokuapp.com']
 
 
 # Application definition
@@ -78,24 +79,23 @@ WSGI_APPLICATION = 'employeedb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(BASE_DIR / 'db.sqlite3'),
-    }
-}
-
-#
-#DATABASES = {
-#   'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': 'ems',
-#        'HOST': '192.168.43.243',
-#        'PORT': '32000',
-#        'USER': 'root',
-#        'PASSWORD': 'rootpassword',
+#'''DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': str(BASE_DIR / 'db.sqlite3'),
 #    }
 #}
+
+DATABASES = {
+   'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd69qb1j7e1lc76',
+        'HOST': 'ec2-18-215-44-132.compute-1.amazonaws.com',
+        'PORT': '5432  ',
+        'USER': 'mdmlxmnewohckc',
+        'PASSWORD': 'e7e327867347ac14231c1a5260b4bf708a31ff74f2a0e333aa03024a70fffbc7',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -134,7 +134,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+django_heroku.settings(locals())
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
