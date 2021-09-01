@@ -1,4 +1,4 @@
-# Employee Management System (dummy application) with backend database integration
+# Employee Management System with backend database integration
 
 ## Project description
 
