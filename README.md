@@ -14,7 +14,7 @@ The application's requirement is to use a form to take Employee ID and Employee 
 
 This has been achieved using a Django web-application. Code has been pushed to GitHub repository. The application has been hosted on Heroku using GitHub repository.
 
-By default Django applications are connected to SQLite database, however, we have made changes in [settings.py](https://github.com/gade-raghav/kubernetes-assignment/blob/master/employeedb/settings.py) to connect it to Postgres Database which is deployed directly in Heroku.
+By default Django applications are connected to SQLite database, however, we have made changes in [settings.py](https://github.com/gade-raghav/EMS/blob/master/employeedb/settings.py) to connect it to Postgres Database which is deployed directly in Heroku.
 
 Application link: https://ems-ap.herokuapp.com/home/
 
