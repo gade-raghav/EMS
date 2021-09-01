@@ -1,0 +1,28 @@
+{% extends "employees/main.html"%}
+{% block title %}EMS-View Employees {% endblock %}
+{% block content%}
+
+<div class="card m-6">
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Employee Name</th>
+      <th scope="col">Employee Id</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for emp in employees %}
+    <tr>
+	    <td>{{emp.employee_name}}</td>
+	    <td>{{emp.employee_id}}</td>
+	    <td><a href="{% url 'update_employee' emp.employee_id %}"><button type="button" class="btn btn-primary">Update</button></a></td>
+	    <td><a href="{% url 'delete_employee' emp.employee_id %}"><button type="button" class="btn btn-danger">Delete</button></a></td>
+
+
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+  </div>
+{% endblock%}
