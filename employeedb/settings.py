@@ -89,11 +89,11 @@ WSGI_APPLICATION = 'employeedb.wsgi.application'
 DATABASES = {
    'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dummyvalue',
-        'HOST': 'dummyvalue',
+        'NAME': 'd69qb1j7e1lc76',
+        'HOST': 'ec2-18-215-44-132.compute-1.amazonaws.com',
         'PORT': '5432  ',
-        'USER': 'dummyvalue',
-        'PASSWORD': 'dummyvalue',
+        'USER': 'mdmlxmnewohckc',
+        'PASSWORD': 'e7e327867347ac14231c1a5260b4bf708a31ff74f2a0e333aa03024a70fffbc7',
     }
 }
 
